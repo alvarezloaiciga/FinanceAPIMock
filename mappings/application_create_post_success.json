@@ -1,0 +1,50 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "/FinanceAPIPrototype/api/Application/Create",
+    "bodyPatterns": [
+      { "matchesJsonPath": "$.birthdate" },
+      { "matchesJsonPath": "$.city" },
+      { "matchesJsonPath": "$.contractLanguage" },
+      { "matchesJsonPath": "$.emailaddress" },
+      { "matchesJsonPath": "$.firstname" },
+      { "matchesJsonPath": "$.grossincome" },
+      { "matchesJsonPath": "$.lastname" },
+      { "matchesJsonPath": "$.ordernumber" },
+      { "matchesJsonPath": "$.ordersource" },
+      { "matchesJsonPath": "$.phonenumber" },
+      { "matchesJsonPath": "$.requestedloanAmount" },
+      { "matchesJsonPath": "$.state" },
+      { "matchesJsonPath": "$.streetaddress" },
+      { "matchesJsonPath": "$.taxidnumber" },
+      { "matchesJsonPath": "$.zipcode" }
+    ]
+  },
+  "response": {
+    "fixedDelayMilliseconds": 8000,
+    "headers": {
+      "Access-Control-Allow-Headers": "Accept, Content-Type, Content-Encoding, Server, Transfer-Encoding",
+      "Access-Control-Allow-Methods": "*",
+      "Access-Control-Allow-Origin": "*",
+      "Content-Type": "application/json",
+      "X-Content-Type-Options": "nosniff",
+      "x-frame-options": "DENY",
+      "x-xss-protection": "1; mode=block"
+    },
+    "jsonBody": {
+      "APR": "{{jsonPath request.body '$.grossincome'}}",
+      "ErrorMessage": null,
+      "InternalApplicationId": "00000000-0000-0000-0000-000000000000",
+      "LastStatusCheck": "10-02-2018",
+      "MonthlyPayment": 26,
+      "PromotionDetails": "These are the promotion details",
+      "Status": "Approved",
+      "TermLength": 36,
+      "VendorApplicationId": "123412562"
+    },
+    "status": 200,
+    "transformers": [
+      "response-template"
+    ]
+  }
+}

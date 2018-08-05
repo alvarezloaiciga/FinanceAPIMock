@@ -1,0 +1,19 @@
+{
+  "request": {
+      "method": "OPTIONS",
+      "url": "/FinanceAPIPrototype/api/Application/Create"
+  },
+  "response": {
+      "status": 200,
+      "headers": {
+        "Access-Control-Allow-Headers": "Accept, Content-Type, Content-Encoding, Server, Transfer-Encoding",
+        "Access-Control-Allow-Methods": "*",
+        "Access-Control-Allow-Origin": "*",
+        "Content-Type": "application/json",
+        "X-Content-Type-Options": "nosniff",
+        "x-frame-options": "DENY",
+        "x-xss-protection": "1; mode=block"
+      },
+      "body": ""
+  }
+}
